@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/ui/button'
+import { Navigate, Route, Routes } from "react-router-dom";
+import Layout from "./layout/Layout";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <Button> click me</Button>
-  )
+    <Routes>
+      <Route path="/" element={<Layout>HOME PAGE</Layout>} />
+      <Route path="/user-profile" element={<span>User</span>} />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
