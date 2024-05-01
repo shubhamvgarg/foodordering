@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 
 type Props={
 children:React.ReactNode
@@ -11,6 +12,7 @@ children:React.ReactNode
         <Header/>
         <Hero/>
         <div className="container mx-auto flex-1 py-10"> {children}</div>
+        <Footer />
     </div>
   )
 }
